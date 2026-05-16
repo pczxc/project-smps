@@ -24,6 +24,7 @@ argon2 = "0.5"
 rand = "0.8"
 base64 = "0.22"
 tokio-cron-scheduler = "0.10"
+regex = "1.10"
 
 [features]
 default = ["custom-protocol"]
