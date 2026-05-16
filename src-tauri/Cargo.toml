@@ -1,0 +1,30 @@
+[package]
+name = "stock-investment-manager"
+version = "1.0.0"
+description = "股票投资管理桌面应用"
+authors = ["Stock Manager Team"]
+license = "MIT"
+repository = ""
+edition = "2021"
+rust-version = "1.78"
+
+[build-dependencies]
+tauri-build = { version = "2.0.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0.0", features = ["tray-icon"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sqlx = { version = "0.7", features = ["runtime-tokio-native-tls", "sqlite", "migrate", "chrono"] }
+tokio = { version = "1.0", features = ["full"] }
+reqwest = { version = "0.12", features = ["json"] }
+chrono = { version = "0.4", features = ["serde"], default-features = false }
+aes-gcm = "0.10"
+argon2 = "0.5"
+rand = "0.8"
+base64 = "0.22"
+tokio-cron-scheduler = "0.10"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

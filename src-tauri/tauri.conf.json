@@ -1,0 +1,66 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "frontendDist": "../dist"
+  },
+  "bundle": {
+    "active": true,
+    "category": "Finance",
+    "copyright": "",
+    "targets": ["msi", "nsis"],
+    "externalBin": [],
+    "icon": [
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": "",
+      "webviewInstallMode": {
+        "type": "embedBootstrapper"
+      }
+    },
+    "longDescription": "",
+    "shortDescription": "",
+    "linux": {
+      "deb": {
+        "depends": []
+      }
+    },
+    "macOS": {
+      "entitlements": null,
+      "exceptionDomain": "",
+      "frameworks": [],
+      "providerShortName": null,
+      "signingIdentity": null
+    },
+    "resources": [],
+    "fileAssociations": []
+  },
+  "productName": "股票投资管理助手",
+  "version": "1.0.0",
+  "identifier": "com.stockmanager.app",
+  "plugins": {},
+  "app": {
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 800,
+        "resizable": true,
+        "title": "股票投资管理助手",
+        "width": 1200,
+        "minWidth": 1024,
+        "minHeight": 768,
+        "center": true,
+        "theme": "Dark"
+      }
+    ],
+    "withGlobalTauri": false
+  }
+}
